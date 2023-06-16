@@ -1,0 +1,47 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .p-flex--single-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    width: 100%;
+    height: auto;
+    
+    // シングルページで横並びにしたテキストの幅を設定
+    p {
+      width: 56%;
+    }
+  }
+}
+
+@include m.mq(tab) {
+  .p-flex--single-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    width: 100%;
+    height: auto;
+    
+    // シングルページで横並びにしたテキストの幅を設定
+    p {
+      width: 58%;
+    }
+  }
+}
+
+@include m.mq(pc) {
+  .p-flex--single-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    width: 100%;
+    height: auto;
+    
+    // シングルページで横並びにしたテキストの幅を設定
+    p {
+      width: 55%;
+    }
+  }
+}

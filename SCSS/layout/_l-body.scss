@@ -1,0 +1,12 @@
+@use '../foundation/breakpoint' as m;
+
+// ページ全体を画面幅に、横スクロール不可にする
+.l-body {
+  width: 100vw;
+  max-width: 2500vw;
+  margin: auto;
+  font-family:"M+ 1m",;
+  overflow-x: hidden;
+}
+
+

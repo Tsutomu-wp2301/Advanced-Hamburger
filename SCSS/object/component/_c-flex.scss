@@ -1,0 +1,12 @@
+@use '../../foundation/breakpoint' as m;
+
+
+// PC版でメインとサイドバーを横並びに配置
+
+@include m.mq(pc) {
+  .c-flex {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+  }
+}

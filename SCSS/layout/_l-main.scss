@@ -1,0 +1,34 @@
+@use '../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .l-main {
+    width: 100vw;
+  }
+}
+
+@include m.mq(tab) {
+  .l-main {
+    width: 100vw;
+  }
+}
+
+@include m.mq(pc) {
+  .l-main {
+    width: 81.15vw;
+  }
+}
+
+
+// メニューが表示されている時にページをスクロールさせない
+@include m.mq(sp) {
+  .l-main.is-active {
+    position: fixed;
+  }
+}
+
+@include m.mq(tab) {
+  .l-main.is-active {
+    position: fixed;
+  }
+}

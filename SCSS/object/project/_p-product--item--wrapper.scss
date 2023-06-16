@@ -1,0 +1,44 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .p-product--item--wrapper {
+    width: 100%;
+    margin-left: 0px;
+    li {
+      list-style-type: none;
+    }
+  }
+  .p-single--layout {
+    .p-product--item--wrapper {
+        margin-top: 0px;
+    }
+  }
+}
+
+@include m.mq(tab) {
+  .p-product--item--wrapper {
+    width: 100%;
+    margin-left: 0px;
+    display: grid;
+    gap: 1.5%;
+    grid-template-columns: 49.25% 49.25%;
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+@include m.mq(pc) {
+  .p-product--item--wrapper {
+    width: 100%;
+    margin-left: 0px;
+    display: grid;
+    gap: 1.5%;
+    grid-template-columns: 32.2% 32.2% 32.2%;
+    grid-auto-rows: minmax(257px, auto);
+    li {
+      list-style-type: none;
+    }
+  }
+}
+

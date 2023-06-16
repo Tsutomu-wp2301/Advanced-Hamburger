@@ -1,0 +1,25 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .p-single--layout {
+    .indent {
+      margin-left: 20px;
+    }
+  }
+}
+
+@include m.mq(tab) {
+  .p-single--layout {
+    .indent {
+      margin-left: 20px;
+    }
+  }
+}
+@include m.mq(pc) {
+  .p-single--layout {
+    .indent {
+      margin-left: 20px;
+    }
+  }
+}

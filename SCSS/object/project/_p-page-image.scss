@@ -1,0 +1,55 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .p-page-image {
+    background-image: url(../image/black-steel-lamp-post-1070945.png);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 36px;
+    color: white;
+  }
+}
+
+@include m.mq(tab) {
+  .p-page-image {
+    background-image: url(../image/black-steel-lamp-post-1070945.png);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 505px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 60px;
+    color: white;
+  }
+}
+
+@include m.mq(pc) {
+  .p-page-image {
+    background-image: url(../image/black-steel-lamp-post-1070945.png);
+    background-position: center;
+    background-size: cover;
+    width: 81.15vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding-left: 85px;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 60px;
+    color: white;
+  }
+}

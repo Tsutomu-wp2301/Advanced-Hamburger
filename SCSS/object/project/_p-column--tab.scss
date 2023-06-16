@@ -1,0 +1,20 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .wp-block-columns.p-column--tab {
+      display: none;
+  }
+}
+@include m.mq(tab) {
+  .wp-block-columns.p-column--tab {
+    .wp-block-image {
+      display: flex;
+      justify-content: center;
+    }
+}
+}
+@include m.mq(pc) {
+  .wp-block-columns.p-column--tab {
+    display: none;
+  }
+}

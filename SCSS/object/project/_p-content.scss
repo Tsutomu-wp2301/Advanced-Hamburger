@@ -1,0 +1,47 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .p-content {
+    min-height: 642px;
+    padding: 0% 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;   
+    .c-title {
+      font-family: "Roboto";
+      font-weight: bold;
+    }
+  }
+}
+
+@include m.mq(tab) {
+  .p-content {
+    min-height: 681px;
+    padding: 0% 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 42.5%;
+    .c-title {
+      font-family: "Roboto";
+      font-weight: bold;
+    }
+  }
+}
+
+@include m.mq(pc) {
+  .p-content {
+    position: relative;
+    width: 40%;
+    min-height: 1196px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .c-title {
+      font-family: "Roboto";
+      font-weight: bold;
+    }
+  }
+}

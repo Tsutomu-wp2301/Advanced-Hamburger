@@ -1,0 +1,9 @@
+@use '../../foundation/breakpoint' as m;
+
+.c-line {
+  display: block;
+  height: 20px;
+  width: 1px;
+  background-color: white;
+  margin: 0px 10px 0px 11px;
+}

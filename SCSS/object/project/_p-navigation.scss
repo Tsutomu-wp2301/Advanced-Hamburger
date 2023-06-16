@@ -1,0 +1,120 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(tab) {
+  // スマホ版のナビゲーションを非表示
+  .p-navigation--sp {
+    display: none;
+  }
+
+  .wp-pagenavi {
+    clear: both;
+    text-align:center;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-bottom: 70px;
+    &::before {
+      content: "page";
+      color: #707070;
+      margin-right: -20px;
+    }
+  }
+  .p-navigation {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+  }
+  p {
+    font-size: 16px;
+    color: #707070;
+    margin: -3px -15px 0px 0px;
+  }
+  .wp-pagenavi {
+    display: block;
+  }
+  .p-navigation a, .p-navigation span {
+    color: #707070;
+    background-color: #FFFFFF;
+    padding: 8px 15px;
+    margin: 0 8px;
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    border:solid 1px #707070;
+  }
+  .p-navigation span:first-child {
+    background-color: rgba(0,0,0,0);
+    border: none;
+  }
+  .wp-pagenavi a:hover{
+    color: #fff;
+    background-color: #3C2B1C;
+  }
+  .wp-pagenavi span.current{
+    color: #fff;
+    background-color: #3C2B1C;
+  }
+}
+
+@include m.mq(pc) {
+  // スマホ版のナビゲーションを非表示
+  .p-navigation--sp {
+    display: none;
+  }
+
+  .wp-pagenavi {
+    clear: both;
+    text-align:center;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-bottom: 70px;
+    &::before {
+      content: "page";
+      color: #707070;
+      margin-right: -20px;
+    }
+  }
+  .p-navigation {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+  }
+  p {
+    font-size: 16px;
+    color: #707070;
+    margin: -3px -15px 0px 0px;
+  }
+  .wp-pagenavi {
+    display: block;
+  }
+  .p-navigation a, .p-navigation span {
+    color: #707070;
+    background-color: #FFFFFF;
+    padding: 8px 15px;
+    margin: 0 8px;
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    border:solid 1px #707070;
+  }
+  .p-navigation span:first-child {
+    background-color: rgba(0,0,0,0);
+    border: none;
+  }
+  .wp-pagenavi a:hover{
+    color: #fff;
+    background-color: #3C2B1C;
+  }
+  .wp-pagenavi span.current{
+    color: #fff;
+    background-color: #3C2B1C;
+  }
+}

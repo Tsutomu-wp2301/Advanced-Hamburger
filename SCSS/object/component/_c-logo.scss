@@ -1,0 +1,48 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .c-logo {
+    display: inline-block;
+    color: #707070;
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 20px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+
+@include m.mq(tab) {
+  .c-logo {
+    color: #707070;
+    font-size: 53px;
+    overflow: hidden;
+    font-family: "Roboto";
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+
+@include m.mq(pc) {
+  .c-logo {
+    color: #707070;
+    font-size: 63px;
+    overflow: hidden;
+    font-family: "Roboto";
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

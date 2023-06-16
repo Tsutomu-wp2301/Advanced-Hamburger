@@ -1,0 +1,87 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .p-archive--image {
+    width: 100vw;
+    height: 285px;
+    background-image: url(../image/page-title_arcive@2x.jpg);
+    background-position: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      display: flex;
+      flex-direction: column;
+      font-size: 35px;
+      color: white;
+      font-family: 'Roboto';
+      font-weight: bold;
+      margin-left: 25px;
+      // &::after {
+      //   content: "チーズバーガー";
+      //   font-size: 16px;
+      //   font-family: 'M+ 1m';
+      //   color: white;
+      //   margin-top: 15px;
+      // }
+    }
+  }
+}
+
+@include m.mq(tab) {
+  .p-archive--image {
+    width: 100vw;
+    height: 285px;
+    background-image: url(../image/page-title_arcive@2x.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      display: flex;
+      align-items: center;
+      font-size: 60px;
+      color: white;
+      font-family: 'Roboto';
+      font-weight: bold;
+      margin-left: 25px;
+      // &::after {
+      //   content: "チーズバーガー";
+      //   font-size: 16px;
+      //   font-family: 'M+ 1m';
+      //   color: white;
+      //   margin-top: 15px;
+      //   margin-left: 15px;
+      // }
+    }
+  }
+}
+
+@include m.mq(pc) {
+  .p-archive--image {
+    background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+    background-size: cover;
+    background-position: center;
+    width: 81.15vw;
+    height: 239px;
+    display: flex;
+    align-items: center;
+    h1 {
+      display: flex;
+      align-items: center;
+      font-size: 60px;
+      color: white;
+      font-family: 'Roboto';
+      font-weight: bold;
+      margin-left: 25px;
+      // &::after {
+      //   content: "チーズバーガー";
+      //   font-size: 16px;
+      //   font-family: 'M+ 1m';
+      //   color: white;
+      //   margin-top: 15px;
+      //   margin-left: 20px;
+      // }
+    }
+  }
+}

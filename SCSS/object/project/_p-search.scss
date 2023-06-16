@@ -1,0 +1,30 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .p-search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+}
+
+@include m.mq(tab) {
+  .p-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+
+@include m.mq(pc) {
+  .p-search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+}

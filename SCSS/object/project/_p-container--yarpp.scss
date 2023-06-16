@@ -1,0 +1,22 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(tab) {
+  .p-container--yarpp {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 70px;
+    }
+  }
+}
+@include m.mq(pc) {
+  .p-container--yarpp {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 70px;
+    }
+  }
+}

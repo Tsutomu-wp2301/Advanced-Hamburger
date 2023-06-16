@@ -1,0 +1,119 @@
+@use '../../foundation/breakpoint' as m;
+
+
+// 検索ボタンとシングルページのボタン
+
+@include m.mq(sp) {
+  button.c-button {
+    width: 90px;
+    height: 46px;
+    background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
+    border-radius: 10px;
+    border: 1px #707070 solid;
+    font-size: 15px;
+    color: #707070;
+    font-family: "M+ 1m";
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  // シングルページのボタン
+  .c-button--single.wp-block-button {
+    width: 429px;
+    height: 104px;
+    border: 1px #707070 solid;
+    font-size: 16px;
+    color: #707070;
+    font-family: "M+ 1m";
+    font-weight: bold;
+    margin-top: 50px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
+    border-radius: 10px;
+    a {
+      margin: auto;
+    }
+    .wp-block-button__link {
+      background-color: rgba(0,0,0,0);
+      color: #707070;
+    }
+  }
+}
+
+  @include m.mq(tab) {
+    button.c-button {
+      width: 136px;
+      height: 46px;
+      background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
+      border-radius: 10px;
+      border: 1px #707070 solid;
+      font-size: 15px;
+      color: #707070;
+      font-family: "M+ 1m";
+      font-weight: bold;
+      margin-left: 5px;
+    // シングル,ページ,のボタン
+    }
+    .c-button--single.wp-block-button {
+      width: 429px;
+      height: 104px;
+      border: 1px #707070 solid;
+      font-size: 16px;
+      color: #707070;
+      font-family: "M+ 1m";
+      font-weight: bold;
+      margin-top: 50px;
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
+      border-radius: 10px;
+      a {
+        margin: auto;
+      }
+      .wp-block-button__link {
+        background-color: rgba(0,0,0,0);
+        color: #707070;
+      }
+    }
+  }
+
+
+@include m.mq(pc) {
+  button.c-button {
+    width: 136px;
+    height: 46px;
+    background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
+    border-radius: 10px;
+    border: 1px #707070 solid;
+    font-size: 16px;
+    color: #707070;
+    font-family: "M+ 1m";
+    font-weight: bold;
+    margin-left: 5px;
+    // シングルページのボタン
+  }
+  .c-button--single.wp-block-button {
+    width: 429px;
+    height: 104px;
+    border: 1px #707070 solid;
+    font-size: 16px;
+    color: #707070;
+    font-family: "M+ 1m";
+    font-weight: bold;
+    margin-top: 50px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
+    border-radius: 10px;
+    a {
+      margin: auto;
+    }
+    .wp-block-button__link {
+      background-color: rgba(0,0,0,0);
+      color: #707070;
+    }
+  }
+}

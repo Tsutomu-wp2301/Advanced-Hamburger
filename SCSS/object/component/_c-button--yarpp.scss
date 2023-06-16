@@ -1,0 +1,41 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-button--yarpp {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #3C2B1C;
+    margin-top: 20px;
+    margin-bottom: 23px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+}
+@include m.mq(tab) {
+  .c-button--yarpp {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #3C2B1C;
+    margin-top: 20px;
+    margin-bottom: 23px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+}
+
+
+@include m.mq(pc) {
+  .c-button--yarpp {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #3C2B1C;
+    margin-top: 20px;
+    margin-bottom: 23px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+}

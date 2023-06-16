@@ -1,0 +1,19 @@
+@use '../../foundation/breakpoint' as m;
+
+.p-content--bg {
+  width: 90%;
+  background-image: url(../image/take-out.png);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &--EatIn {
+    width: 90%;
+    background-image: url(../image/eat-in.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+}

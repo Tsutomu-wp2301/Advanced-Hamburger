@@ -1,0 +1,60 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-button--archive {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #707070;
+    background-color: white;
+    width: 163px;
+    height: 43px;
+    border-radius: 50px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+@include m.mq(tab) {
+  .c-button--archive {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #707070;
+    background-color: white;
+    width: 163px;
+    height: 43px;
+    border-radius: 50px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@include m.mq(pc) {
+  .c-button--archive {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #707070;
+    background-color: white;
+    width: 292px;
+    height: 76px;
+    border-radius: 50px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 55px;
+  }
+}

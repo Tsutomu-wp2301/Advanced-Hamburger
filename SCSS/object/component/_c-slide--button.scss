@@ -1,0 +1,56 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-slide--button {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 1.5rem;
+    color: #707070;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 28px;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 2;
+  }
+}
+@include m.mq(tab) {
+  .c-slide--button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    color: #707070;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 20px;
+    opacity: 1;
+    transition: 0.2s;
+    z-index: 2;
+   a {
+    margin-top: 60px;
+   }
+  }
+}
+
+// サイドメニュー表示（is-active)でメニューボタンを隠す
+@include m.mq(sp) {
+  .c-slide--button.is-active {
+    opacity: 0;
+  }
+}
+@include m.mq(tab) {
+  .c-slide--button.is-active {
+    opacity: 0;
+  }
+}
+
+
+// PC版では最初からメニューボタンを隠す
+@include m.mq(pc) {
+  .c-slide--button {
+    display: none;
+  }
+}

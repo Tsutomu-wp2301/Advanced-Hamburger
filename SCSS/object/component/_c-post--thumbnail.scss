@@ -1,0 +1,28 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-post--thumbnail {
+    width: 100%;
+    height: auto;
+    min-height: 231px;
+  }
+}
+
+
+@include m.mq(tab) {
+  .c-post--thumbnail {
+    width: 50%;
+    height: auto;
+    min-height: 231px;
+  }
+}
+
+
+@include m.mq(pc) {
+  .c-post--thumbnail {
+    width: 50%;
+    height: auto;
+    min-height: 231px;
+  }
+}

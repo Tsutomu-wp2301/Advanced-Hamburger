@@ -1,0 +1,52 @@
+@use '../../foundation/breakpoint' as m;
+
+
+// サイドメニューの黒い背景を透明にしておく
+
+@include m.mq(sp) {
+  .c-color-board--black {
+    position: absolute;
+    top: 0px;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.501961);
+  }
+}
+@include m.mq(tab) {
+  .c-color-board--black {
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.501961);
+  }
+}
+
+// is-activeで黒い背景を表示させる
+// @include m.mq(sp) {
+//   .c-color-board--black.is-active {
+//     opacity: 1;
+//     z-index: 50;
+//     position: fixed;
+//   }
+// }
+// @include m.mq(tab) {
+//   .c-color-board--black.is-active {
+//     // visibility: 1;
+//     // opacity: 1;
+//     display: none;
+//     top: 0;
+//     z-index: 50;
+//     position: fixed;
+//   }
+// }
+
+
+// PC版で黒い背景を削除する
+@include m.mq(pc) {
+  .c-color-board--black {
+    display: none;
+  }
+}

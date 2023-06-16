@@ -1,0 +1,21 @@
+@use '../../foundation/breakpoint' as m;
+
+
+// テキストと画像の並びを入れ替える
+@include m.mq(sp){
+  .left {
+    order: -1;
+  }
+}
+
+@include m.mq(tab){
+  .left {
+    order: -1;
+  }
+}
+
+@include m.mq(pc){
+  .left {
+    order: -1;
+  }
+}

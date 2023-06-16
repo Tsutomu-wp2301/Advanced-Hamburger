@@ -1,0 +1,46 @@
+@use '../../foundation/breakpoint' as m;
+
+
+// ヘッダーのメディアクエリ
+@include m.mq(sp) {
+  .p-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFF7EF;
+  }
+}
+
+@include m.mq(tab) {
+  .p-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFF7EF;
+    .c-search {
+      margin-bottom: 30px;
+    }
+    .c-logo {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include m.mq(pc) {
+  .p-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #FFF7EF;
+    .c-logo {
+      margin-left: 70px;
+      margin-top: -10px;
+    }
+    .c-search {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use '../foundation/breakpoint' as m;
+
+
+// スマホとタブレットでサイドメニューを左側に隠す
+@include m.mq(sp) {
+  .l-aside {
+    position: fixed;
+    left: 100%;
+    top: 0%;
+    transition: 0.3s;
+    z-index: 200;
+  }
+}
+@include m.mq(tab) {
+  .l-aside {
+    position: fixed;
+    left: 100%;
+    top: 0%;
+    transition: 0.3s;
+    z-index: 200;
+  }
+}
+
+// PCではフレックスを適用させる
+@include m.mq(pc) {
+  .l-aside {
+    position: static;
+  }
+}
+
+// is-activeでサイドメニューを表示させる
+@include m.mq(sp) {
+  .l-aside.is-active {
+    position: absolute;
+    left: calc(100vw - 328px);
+    transition-delay: 0.5s;
+    z-index: 200;
+    overflow-y: scroll;
+  }
+}
+@include m.mq(tab) {
+  .l-aside.is-active {
+    position: absolute;
+    left: calc(100vw - 367px);
+    transition-delay: 0.5s;
+    z-index: 200;
+    overflow-y: scroll;
+  }
+}

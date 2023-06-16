@@ -1,0 +1,106 @@
+@use '../../foundation/breakpoint' as m;
+
+// フッター共通の指定
+.p-footer {
+  background-color: #9D8670;
+  background-image: url(../image/bg--footer.png);
+  background-repeat: repeat;
+  .copyright {
+    font-family: "M+ 1m";
+  }
+  p{
+    font-family: "M+ 1m";
+  }
+  .footer-nav-container {
+    .footer-nav {
+     display: flex;
+     align-items: center;
+    }
+   }
+  li {
+    list-style-type: none;
+    a {
+      color: #fff;
+      font-size: 20px;
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 25px;
+        width: 2px;
+        background-color: #fff;
+        margin: -4px 15px;
+      }
+   }
+  }
+  li:last-of-type {
+    a {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+// フッターのメディアクエリ
+@include m.mq(sp) {
+  .p-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+    p {
+      font-size: 1.1rem;
+      color: white;
+    }
+    .copyright {
+    font-size: 0.7rem;   
+    }
+  }
+}
+
+@include m.mq(tab) {
+  .p-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+    p {
+      font-size: 1.3rem;
+      color: white;
+    }
+    .copyright {
+    font-size: 0.9rem;   
+    }
+  }
+}
+
+@include m.mq(pc) {
+  .p-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+    p {
+      font-size: 1.3rem;
+      color: white;
+    }
+    .copyright {
+    font-size: 0.9rem;   
+    }
+  }
+}

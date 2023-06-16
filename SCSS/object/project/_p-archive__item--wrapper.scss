@@ -1,0 +1,61 @@
+@use '../../foundation/breakpoint' as m;
+
+// スマホ版のカードの余白指定とレイアウト
+@include m.mq(sp) {
+  .p-archive__item--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    position: relative;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+// タブレット版のカードの余白指定とレイアウト
+@include m.mq(tab) {
+  .p-archive__item--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 20px;
+    position: relative;
+    img {
+      object-fit: cover;
+    }
+  }
+  .p-archive--content--wrapper {
+    .p-archive__item--wrapper:nth-of-type(1) {
+      margin-top: 30px;
+    } 
+    .p-archive__item--wrapper:last-of-type {
+      margin-top: 20px;
+      margin-bottom: 70px;
+    } 
+  }
+}
+
+// pc版のカードの余白指定とレイアウト
+@include m.mq(pc) {
+  .p-archive__item--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 25px;
+    position: relative;
+    img {
+      object-fit: cover;
+    }
+  }
+  .p-archive--content--wrapper {
+    .p-archive__item--wrapper:nth-of-type(1) {
+      margin-top: 50px;
+    } 
+    .p-archive__item--wrapper:last-of-type {
+      margin-bottom: 70px;
+    } 
+  }
+}

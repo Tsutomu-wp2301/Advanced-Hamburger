@@ -1,0 +1,93 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-title {
+    font-size: 41px;
+    margin: 10px;
+    color: white;
+    &::after {
+      display: block;
+      content: "";
+      height: 4px;
+      width: 36px;
+      background-color: white;
+      margin-top: 15px;
+    }
+    &.map {
+      display: inline-block;
+      font-family: "M+ 1m";
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: 8%;
+      margin-left: 10%;
+      &::after {
+        margin-top: 20px;
+        margin-bottom: 7px;
+        height: 2px;
+        width: 75px;
+      }
+    }
+  }
+}
+
+@include m.mq(tab) {
+  .c-title {
+    font-size: 44px;
+    margin: 10px;
+    color: white;
+    &::after {
+      display: block;
+      content: "";
+      height: 4px;
+      width: 36px;
+      background-color: white;
+      margin-top: 20px;
+    }
+    &.map {
+      display: inline-block;
+      font-family: "M+ 1m";
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: 8%;
+      margin-left: 10%;
+      &::after {
+        margin-top:15px;
+        margin-bottom: 7px;
+        height: 2px;
+        width: 75px;
+      }
+    }
+
+  }
+}
+
+@include m.mq(pc) {
+  .c-title {
+    font-size: 80px;
+    margin: 10px 25px;
+    color: white;
+    &::after {
+      display: block;
+      content: "";
+      height: 4px;
+      width: 63px;
+      background-color: white;
+      margin-top: 30px;
+    }
+    &.map {
+      display: inline-block;
+      font-family: "M+ 1m";
+      font-weight: bold;
+      font-size: 36px;
+      margin-top: 10%;
+      margin-left: 10%;
+      &::after {
+        margin-top: 50px;
+        margin-bottom: 45px;
+        height: 2px;
+        width: 75px;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .p-yarpp__item {
+    background-color: #F9F0E2;
+    position: relative;
+    h3 {
+      color: #3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: bold;
+      font-size: 32px;
+      padding: 0px 0px 0px 20px;
+      margin-top: 20px;
+    }
+    p {
+      color: #3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: normal;
+      font-size: 16px;
+      padding: 0px 20px 0px 20px;
+      margin-top: 20px;
+    }
+  }
+}
+@include m.mq(tab) {
+  .p-yarpp__item {
+    background-color: #F9F0E2;
+    position: relative;
+    width: 100%;
+    h3 {
+      color: #3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: bold;
+      font-size: 32px;
+      padding: 0px 10px 0px 20px;
+      margin-top: 20px;
+    }
+    p {
+      color: #3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: normal;
+      font-size: 16px;
+      padding: 0px 20px 0px 20px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@include m.mq(pc) {
+  .p-yarpp__item {
+    background-color: #F9F0E2;
+    position: relative;
+    width: 100%;
+    h3 {
+      color: #3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: bold;
+      font-size: 32px;
+      padding: 0px 10px 0px 20px;
+      margin-top: 20px;
+    }
+    p {
+      color: #3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: normal;
+      font-size: 16px;
+      padding: 0px 20px 0px 20px;
+      margin-top: 20px;
+    }
+  }
+}

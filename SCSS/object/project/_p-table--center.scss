@@ -1,0 +1,39 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .p-table--center {
+    display: flex;
+    flex-direction: column;
+    li {
+      width: 200px;
+      height: 77px;
+      display: flex;
+      padding-left: 20%;
+      align-items: center;
+      font-size: 16px;
+      font-family: 'M+ 1m';
+      color: #3C2A10;
+      border: #707070 solid 1px;
+      border-bottom: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      &:nth-of-type(5) {
+        border: #707070 solid 1px;
+        border-left: 0px;
+        border-right: 0px;
+      }
+    }
+  }
+}
+
+// tabとpcでテーブルを2列にする
+@include m.mq(tab) {
+  .p-table--center {
+    display: none;
+  }
+}
+@include m.mq(pc) {
+  .p-table--center {
+    display: none;
+  }
+}

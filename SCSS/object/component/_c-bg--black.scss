@@ -1,0 +1,28 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-bg--black {
+    background-color: #000;
+    margin-top: 30px;
+    height: auto;
+    min-height: 691px;
+    width: 100vw;
+  }
+}
+
+@include m.mq(tab) {
+  .c-bg--black {
+    background-color: #000;
+    min-height: 415px;
+    width: 100vw;
+  }
+}
+
+@include m.mq(pc) {
+  .c-bg--black {
+    background-color: #000;
+    min-height: 650px;
+    width: 81.15vw;
+  }
+}

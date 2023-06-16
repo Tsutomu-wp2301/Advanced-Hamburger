@@ -1,0 +1,89 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-next {
+    display: none;
+
+    
+    height: 12px;
+    width: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #707070;
+    border-style: solid;
+    border-top: 1px;
+    border-right: 1px;
+    transform: rotate(-135deg);
+    position: absolute;
+    right: 20px;
+    &::after {
+      content: "";
+      height: 12px;
+      width: 12px;
+      background-color: rgba(0, 0, 0, 0);
+      border-color: #707070;
+      border-style: solid;
+      border-top: 1px;
+      border-right: 1px;
+      position: absolute;
+      left: 4px;
+      top: -6.5px; 
+    }
+  }
+}
+@include m.mq(tab) {
+  .c-next {
+    // display: none;
+
+    height: 12px;
+    width: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #707070;
+    border-style: solid;
+    border-top: 1px;
+    border-right: 1px;
+    transform: rotate(-135deg);
+    position: relative;
+    &::after {
+      content: "";
+      height: 12px;
+      width: 12px;
+      background-color: rgba(0, 0, 0, 0);
+      border-color: #707070;
+      border-style: solid;
+      border-top: 1px;
+      border-right: 1px;
+      position: absolute;
+      left: 4px;
+      top: -6.5px; 
+    }
+  }
+}
+@include m.mq(pc) {
+  .c-next {
+    // display: none;
+
+    height: 12px;
+    width: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #707070;
+    border-style: solid;
+    border-top: 1px;
+    border-right: 1px;
+    transform: rotate(-135deg);
+    position: relative;
+    &::after {
+      content: "";
+      height: 12px;
+      width: 12px;
+      background-color: rgba(0, 0, 0, 0);
+      border-color: #707070;
+      border-style: solid;
+      border-top: 1px;
+      border-right: 1px;
+      position: absolute;
+      left: 4px;
+      top: -6.5px; 
+    }
+  }
+}

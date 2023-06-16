@@ -1,0 +1,26 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .c-archive--titlle {
+    font-family: 'M+ 1m';
+    font-size: 28px;
+    color: #3c2a10;
+    margin: 35px 0px 30px 0px ;
+  }
+}
+@include m.mq(tab) {
+  .c-archive--titlle {
+    font-family: 'M+ 1m';
+    font-size: 36px;
+    color: #3c2a10;
+    margin: 25px 0px 30px 0px ;
+  }
+}
+@include m.mq(pc) {
+  .c-archive--titlle {
+    font-family: 'M+ 1m';
+    font-size: 36px;
+    color: #3c2a10;
+    margin: 25px 0px 30px 0px ;
+  }
+}
