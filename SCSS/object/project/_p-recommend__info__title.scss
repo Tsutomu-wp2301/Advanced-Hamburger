@@ -1,0 +1,42 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .p-recommend__info__title {
+    margin-top: 15px;
+    margin-bottom: 60px;
+    a {
+      text-decoration: none;
+      text-decoration: underline;
+      font-size: 16px;
+      color: #3C2B1C;
+      font-family: inherit;
+    }
+
+  }
+}
+@include m.mq(tab) {
+  .p-recommend__info__title {
+    margin-top: 15px;
+    margin-bottom: 60px;
+    a {
+      text-decoration: none;
+      text-decoration: underline;
+      font-size: 16px;
+      color: #3C2B1C;
+      font-family: inherit;
+    }
+  }
+}
+@include m.mq(pc) {
+  .p-recommend__info__title {
+    margin-top: 15px;
+    margin-bottom: 60px;
+    a {
+      text-decoration: none;
+      text-decoration: underline;
+      font-size: 16px;
+      color: #3C2B1C;
+      font-family: inherit;
+    }
+  }
+}

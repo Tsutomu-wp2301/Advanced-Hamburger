@@ -2,7 +2,7 @@
 
 <?php 
 /* 
-Template Name:フロント、サーチ、アーカイブページ用のフィールド設定
+Template Name:フロント、サーチ、アーカイブページ、おすすめ情報のフィールド設定
 */ 
 ?>
 
@@ -243,6 +243,32 @@ Template Name:フロント、サーチ、アーカイブページ用のフィー
               echo 'プラグインCFSを有効にし、サーチページの説明文を入力します';
             } 
           ?>
+        </p>
+      </article>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <!-- おすすめ情報のタイトル---カスタムフィールド -->
+      <article class="p-archive--content--wrapper">
+        <h2 class="c-archive--titlle">
+         おすすめ情報のタイトルを設定します
+        </h2>
+        <p>
+          <?php 
+              if (is_plugin_active('custom-field-suite/cfs.php')) {
+                $recommend_title = CFS()->get('recommended_information');
+                if(!empty($recommend_title)) {
+                  echo esc_html($recommend_title);
+                } else { 
+                  echo '<a href="' . get_template_directory_uri() . '">ブログのトップページへ</a>';
+                } 
+              }else{
+                echo 'プラグインCFSを有効化し、カスタムフィールドからおすすめ情報のタイトルを設定します';
+              }
+            ?>
         </p>
       </article>
     </main>

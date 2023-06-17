@@ -944,7 +944,7 @@ body {
     font-family: "M+ 1m";
     color: #3C2B1C;
     margin-top: 20px;
-    margin-bottom: 23px;
+    margin-bottom: 5px;
     margin-right: 20px;
     margin-left: auto;
   }
@@ -2924,6 +2924,7 @@ body {
     background-color: #F9F0E2;
     position: relative;
     width: 100%;
+    height: 100%;
   }
   .p-yarpp__item h3 {
     color: #3C2B1C;
@@ -2940,6 +2941,7 @@ body {
     font-size: 16px;
     padding: 0px 20px 0px 20px;
     margin-top: 20px;
+    margin-right: 3px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2947,6 +2949,7 @@ body {
     background-color: #F9F0E2;
     position: relative;
     width: 100%;
+    height: 100%;
   }
   .p-yarpp__item h3 {
     color: #3C2B1C;
@@ -2963,6 +2966,7 @@ body {
     font-size: 16px;
     padding: 0px 20px 0px 20px;
     margin-top: 20px;
+    margin-right: 3px;
   }
 }
 @media screen and (max-width: 780px) {
@@ -3000,6 +3004,153 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .p-recommend__info__title {
+    margin-top: 15px;
+    margin-bottom: 60px;
+  }
+  .p-recommend__info__title a {
+    text-decoration: none;
+    text-decoration: underline;
+    font-size: 16px;
+    color: #3C2B1C;
+    font-family: inherit;
+  }
+}
+@media screen and (min-width:781.5px) and (max-width:1199.5px) {
+  .p-recommend__info__title {
+    margin-top: 15px;
+    margin-bottom: 60px;
+  }
+  .p-recommend__info__title a {
+    text-decoration: none;
+    text-decoration: underline;
+    font-size: 16px;
+    color: #3C2B1C;
+    font-family: inherit;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-recommend__info__title {
+    margin-top: 15px;
+    margin-bottom: 60px;
+  }
+  .p-recommend__info__title a {
+    text-decoration: none;
+    text-decoration: underline;
+    font-size: 16px;
+    color: #3C2B1C;
+    font-family: inherit;
+  }
+}
+@media screen and (max-width: 780px) {
+  .p-announcement-image {
+    position: relative;
+    background-image: url(../image/unsplash3.png);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 225px;
+    display: flex;
+    align-items: center;
+  }
+  .p-announcement-image ::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明の黒色 */
+    z-index: 1;
+  }
+}
+@media screen and (min-width:781.5px) and (max-width:1199.5px) {
+  .p-announcement-image {
+    background-image: url(../image/unsplash3.png);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 505px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+  }
+  .p-announcement-image ::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明の黒色 */
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-announcement-image {
+    background-image: url(../image/unsplash3.png);
+    background-position: center;
+    background-size: cover;
+    width: 81.15vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding-left: 85px;
+  }
+  .p-announcement-image ::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明の黒色 */
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 780px) {
+  .p-announce__title__layout {
+    position: relative;
+  }
+  .p-announce__title__layout h1 {
+    display: inline-block;
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    top: 30%;
+    left: 10%;
+    z-index: 2;
+  }
+}
+@media screen and (min-width:781.5px) and (max-width:1199.5px) {
+  .p-announce__title__layout {
+    position: relative;
+  }
+  .p-announce__title__layout h1 {
+    display: inline-block;
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    top: 30%;
+    left: 10%;
+    z-index: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-announce__title__layout {
+    position: relative;
+  }
+  .p-announce__title__layout h1 {
+    display: inline-block;
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    top: 30%;
+    left: 10%;
+    z-index: 2;
   }
 }
 @media screen and (max-width: 780px) {
