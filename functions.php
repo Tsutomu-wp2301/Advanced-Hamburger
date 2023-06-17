@@ -91,3 +91,25 @@ function crunchify_dequeue_footer_styles()
   wp_dequeue_style('yarppRelatedCss');
 }
 add_action('get_footer','crunchify_dequeue_footer_styles');
+
+
+
+// function sort_side_menu( $menu_order ) {
+//     return array(
+//       "index.php", // ダッシュボード
+//       "edit.php", // 投稿
+//       "edit.php?post_type=page", // 固定ページ
+//       "separator1", // 区切り線1
+//       "upload.php", // メディア
+//       "edit-comments.php", // コメント
+//       "separator2", // 区切り線2
+//       "themes.php", // 外観
+//       "plugins.php", // プラグイン
+//       "users.php", // ユーザー
+//       "tools.php", // ツール
+//       "options-general.php", // 設定
+//       "separator-last" // 区切り線（最後）
+//     );
+//   }
+//   add_filter( 'custom_menu_order', '__return_true' );
+//   add_filter( 'menu_order', 'sort_side_menu' );

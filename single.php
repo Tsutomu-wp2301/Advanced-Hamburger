@@ -3,6 +3,8 @@
   $single_id = $post->ID;
 ?>
 
+
+
 <?php get_header(); ?><!-- ヘッダーの呼び出し -->
       <section>
         <?php if( have_posts() ) :  while( have_posts() ) : the_post(); ?>
@@ -38,8 +40,27 @@
             ?>
           </p>
             <?php the_content(); ?>
+            <!-- カスタムフィールド設定ページのIDを取得 -->
+            <?php 
+            $page = get_page_by_path('page-field');
+            $id = $page->ID;
+            ?>
             <h2>★おすすめ情報</h2>
-            <p>おすすめ情報のリンクを設定する</p>
+            <?php include_once(ABSPATH . 'wp-admin/includes/plugin.php'); ?>
+            <div class="p-recommend__info__title">
+              <?php 
+                if (is_plugin_active('custom-field-suite/cfs.php')) {
+                  $recommend_title = CFS()->get('recommended_information',$id);
+                  if(!empty($recommend_title)) {
+                    echo $recommend_title;
+                  } else { 
+                    echo '<a href="' . get_template_directory_uri() . '">ブログのトップページへ</a>';
+                  } 
+                }else{
+                  echo 'プラグインCFSを有効化し、カスタムフィールドからおすすめ情報のタイトルを設定します';
+                }
+              ?>
+            </div>
             <h2>★おすすめ商品</h2>
             <div class="p-container--yarpp">
               <?php
