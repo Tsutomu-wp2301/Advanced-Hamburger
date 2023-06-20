@@ -1,7 +1,7 @@
 <!-- カスタムフィールド設定ページのIDを取得 -->
 <?php 
-$page = get_page_by_path('page-field');
-$id = $page->ID;
+$announcement = get_page_by_path('newslist-field');
+$id = $announcement->ID;
 ?>
 
 <?php get_header(); ?><!-- ヘッダーの呼び出し -->
@@ -14,46 +14,59 @@ $id = $page->ID;
       <?php endif; ?>
       <div class="p-archive--image">
         <div class="c-bg--black--archive">
-          <h1>Search:  <?php echo esc_attr( get_search_query() ); ?></h1>
+          <h1>News: </h1>
+          <p>
+            すべての記事（　件）
+            <!-- <?php
+              $category = get_the_category();
+                echo ' ';
+                if ($category) {
+                  foreach ($category as $cat) {
+                    echo esc_html($cat->name) . ' ';
+                  }
+              }
+            ?> -->
+          </p>
         </div>
       </div>
       <article class="p-archive--content--wrapper">
         <h2 class="c-archive--titlle">
+          お知らせアーカイブの小見出し
           <?php include_once(ABSPATH . 'wp-admin/includes/plugin.php'); ?>
           <?php 
             if (is_plugin_active('custom-field-suite/cfs.php')) {
-              $h2_search_title = CFS()->get('h2_search',$id);
-              if(!empty($h2_search_title)) {
-                echo esc_html($h2_search_title);
+              $newslist_title = CFS()->get('newslist_title',$id); 
+              if(!empty($newslist_title)) {
+                echo esc_html($newslist_title);
               } else { 
-                echo 'サーチページの小見出しを設定します';
+                echo 'お知らせ一覧ページの小見出しを設定してください';
               } 
             }else{
-              echo 'プラグインCFSを有効化し、カスタムフィールドからサーチページの小見出しを設定します';
+              echo 'プラグインCFSを有効にし、お知らせ一覧ページの見出しを入力します';
             }
           ?>
         </h2>
         <p>
           <?php 
             if (is_plugin_active('custom-field-suite/cfs.php')) {
-              $search_text = CFS()->get('text_search',$id);
-              if(!empty($search_text)) {
-                echo esc_html($search_text);
+              $newslist_text = CFS()->get('newslist_text',$id);
+              if(!empty($newslist_text)) {
+                echo esc_html($newslist_text);
               } else { 
-                echo 'サーチページの説明文を入力します';
+                echo 'お知らせ一覧ページの説明文をを入力してください';
               } 
             }else{
-              echo 'プラグインCFSを有効化し、カスタムフィールドからサーチページの説明文を入力します';
+              echo 'プラグインCFSを有効にし、お知らせ一覧ページの説明文を入力します。プラグインCFSを有効にし、お知らせ一覧ページの説明文を入力します。';
             }
           ?>
         </p>
-
+        
         <?php if( have_posts() ) :  while( have_posts() ) : the_post(); ?>
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <?php get_template_part( 'template-parts/excerpt', 'post'); ?>
+            <?php get_template_part( 'template-parts/announcement', 'post'); ?>
           </article>
         <?php endwhile;  endif; ?>
-
+        
       </article>
       <nav class="p-navigation">
         <!-- <p>page</p> -->
