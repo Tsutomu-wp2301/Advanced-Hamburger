@@ -1,6 +1,6 @@
 <!-- カスタムフィールド設定ページのIDを取得 -->
 <?php 
-$announcement = get_page_by_path('newslist-field');
+$announcement = get_page_by_path('page-announcement-field');
 $id = $announcement->ID;
 ?>
 
@@ -31,7 +31,6 @@ $id = $announcement->ID;
       </div>
       <article class="p-archive--content--wrapper">
         <h2 class="c-archive--titlle">
-          お知らせアーカイブの小見出し
           <?php include_once(ABSPATH . 'wp-admin/includes/plugin.php'); ?>
           <?php 
             if (is_plugin_active('custom-field-suite/cfs.php')) {

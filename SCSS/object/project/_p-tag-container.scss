@@ -1,0 +1,13 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .p-tag-container {
+    .p-tag {
+      background-color: #D9D9D9;
+      border-radius: 10px;
+      padding: 0px 10px 0px 10px;
+      margin-right: 4px;
+    }
+  }
+}
