@@ -6,6 +6,13 @@
 
 
 <?php get_header(); ?><!-- ヘッダーの呼び出し -->
+      <?php if (!is_front_page()) : ?> 
+        <?php if(function_exists('bcn_display')) :?>
+          <nav class="p-breadcrumb" typeof="BreadcrumbList" vocab="http//schema.org/" aria-lavel="現在のページ">
+            <?php bcn_display(); ?>
+          </nav>
+        <?php endif; ?>
+      <?php endif; ?>
       <section>
         <?php if( have_posts() ) :  while( have_posts() ) : the_post(); ?>
           <h1 class="p-single-image"><?php echo get_the_title(); ?></h1>
