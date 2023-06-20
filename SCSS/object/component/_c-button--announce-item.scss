@@ -1,0 +1,40 @@
+@use '../../foundation/breakpoint' as m;
+
+
+@include m.mq(sp) {
+  .c-button--announce-item {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #3C2B1C;
+    display: block;
+    text-align: right;
+    margin: 0px 0px 5px 0px;
+  }
+}
+@include m.mq(tab) {
+  .c-button--announce-item {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #3C2B1C;
+    margin-top: 20px;
+    margin-bottom: 23px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+}
+
+
+@include m.mq(pc) {
+  .c-button--announce-item {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'M+ 1m';
+    color: #3C2B1C;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+}
