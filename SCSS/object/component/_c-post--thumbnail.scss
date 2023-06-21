@@ -12,17 +12,15 @@
 
 @include m.mq(tab) {
   .c-post--thumbnail {
-    width: 50%;
-    height: auto;
-    min-height: 231px;
+    width: 208px;
+    height: 145px;
   }
 }
 
 
 @include m.mq(pc) {
   .c-post--thumbnail {
-    width: 50%;
-    height: auto;
-    min-height: 231px;
+    width: 324px;
+    height: 225px;
   }
 }
