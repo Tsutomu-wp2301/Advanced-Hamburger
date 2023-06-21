@@ -12,23 +12,27 @@ $id = $announcement->ID;
           </nav>
         <?php endif; ?>
       <?php endif; ?>
-      <div class="p-archive--image">
+      <div class="p-announce__title__layout">
+        <div class="p-announcement__archive-image"></div>
+        <h1>News: </h1>
+        <p>
+          <?php
+            $count = $wp_query->found_posts; // 投稿の総件数を取得
+            echo '全ての記事（' . $count . '件）';
+          ?>
+        </P>
+      </div>
+      <!-- <div class="p-archive--image">
         <div class="c-bg--black--archive">
           <h1>News: </h1>
           <p>
-            すべての記事（　件）
-            <!-- <?php
-              $category = get_the_category();
-                echo ' ';
-                if ($category) {
-                  foreach ($category as $cat) {
-                    echo esc_html($cat->name) . ' ';
-                  }
-              }
-            ?> -->
-          </p>
+            <?php
+              $count = $wp_query->found_posts; // 投稿の総件数を取得
+              echo '全ての記事（' . $count . '件）';
+            ?>
+          </P>
         </div>
-      </div>
+      </div> -->
       <article class="p-archive--content--wrapper">
         <h2 class="c-archive--titlle">
           <?php include_once(ABSPATH . 'wp-admin/includes/plugin.php'); ?>
