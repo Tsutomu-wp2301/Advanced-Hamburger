@@ -29,26 +29,26 @@
         ?>
       </div><!-- NEWマークを表示させる -->
     </div>
-    <?php 
+    <?php
       $categories = get_the_category(); // 標準投稿のカテゴリーの配列を取得
-      $category_names = array(); // カテゴリー名を格納するための配列
+      $category_links = array(); // カテゴリーリンクを格納するための配列
       foreach ($categories as $category) {
-        $category_names[] = $category->name; // カテゴリー名を配列に追加
+        $category_links[] = '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>'; // カテゴリーリンクを配列に追加
       }
-      $category_list = implode(', ', $category_names); // カテゴリー名をカンマで区切って結合
-      echo '<span>' . $category_list . '</span>'; // <p>要素でカテゴリー名を表示
-    ?><!-- 標準投稿のカテゴリーを表示する -->
-    <?php 
+      $category_list = implode(', ', $category_links); // カテゴリーリンクをカンマで区切って結合
+      echo '<span>' . $category_list . '</span>'; // <span>要素でカテゴリーリンクを表示
+    ?><!-- 標準投稿のカテゴリーをリンク付きで表示する -->
+    <?php
       $tags = get_the_tags();
       if ($tags) {
         echo '<div class="p-tag-container">';
         foreach ($tags as $tag) {
-            echo '<span class="p-tag">' . $tag->name . '</span>';
+            echo '<a href="' . get_tag_link($tag->term_id) . '" class="p-tag">' . $tag->name . '</a>';
         }
         echo '</div>';
       }
     ?><!-- 標準投稿のタグを表示する -->
     <p><?php echo esc_html(mb_substr(get_the_excerpt(),0,80)) . '...'; ?></p>
-    <a href="<?php the_permalink(); ?>" class="c-button--announce-item p-stretched--link">詳しく見る</a>
+    <a href="<?php the_permalink(); ?>" class="c-button--announce-item">詳しく見る</a>
   </div>
 </section>

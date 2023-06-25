@@ -20,12 +20,12 @@ $id = $tagfield->ID;
         <div class="p-announcement__archive-image"></div>
         <h1>News: </h1>
         <p>
-          <?php if (!empty($tag)) : ?>
-            <?php the_tags(', '); ?>
-          <?php else : ?>
-            タグはありません
-          <?php endif; ?>
-          （<?php echo $count; ?>件）
+          <?php
+            $count = $wp_query->found_posts; // 投稿の総件数を取得
+            $current_term = get_queried_object(); // 現在表示されているタームを取得
+            $term_name = $current_term->name; // 現在表示されているタームの名前
+            echo $term_name . '（' . $count . '件）';
+          ?>
         </p>
       </div>
       <article class="p-archive--content--wrapper">

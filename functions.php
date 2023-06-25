@@ -68,7 +68,7 @@ function post_has_archive($args, $post_type){
     if ('post' == $post_type) {
         $args['rewrite'] = true; // リライトを有効にする
         $args['has_archive'] = 'archives'; // 任意のスラッグ名
-        $args['label'] = '商品紹介'; // ”投稿”の表示を”Menu”に変更
+        $args['label'] = '商品紹介'; // ”投稿”の表示を”商品紹介”に変更
     }
     return $args;
 }
@@ -85,33 +85,25 @@ function custom_search_posts_per_page($query) {
 add_filter('pre_get_posts', 'custom_search_posts_per_page');
 
 
+//アーカイブページで投稿数を6件にする
+function custom_archive_posts_per_page($query) {
+    if (!is_admin() && (is_tax() || is_post_type_archive() || is_category() || is_tag())) {
+        $query->set('posts_per_page', 6);
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'custom_archive_posts_per_page');
+
+
+
+
+
 // YARPPのrelated.cssを削除
 function crunchify_dequeue_footer_styles()
 {
   wp_dequeue_style('yarppRelatedCss');
 }
 add_action('get_footer','crunchify_dequeue_footer_styles');
-
-
-// function sort_side_menu( $menu_order ) {
-//     return array(
-//       "index.php", // ダッシュボード
-//       "edit.php", // 投稿
-//       "edit.php?post_type=page", // 固定ページ
-//       "separator1", // 区切り線1
-//       "upload.php", // メディア
-//       "edit-comments.php", // コメント
-//       "separator2", // 区切り線2
-//       "themes.php", // 外観
-//       "plugins.php", // プラグイン
-//       "users.php", // ユーザー
-//       "tools.php", // ツール
-//       "options-general.php", // 設定
-//       "separator-last" // 区切り線（最後）
-//     );
-//   }
-//   add_filter( 'custom_menu_order', '__return_true' );
-//   add_filter( 'menu_order', 'sort_side_menu' );
 
 
 function add_post_category_archive( $wp_query ) {
