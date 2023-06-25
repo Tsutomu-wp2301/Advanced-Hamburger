@@ -33,16 +33,16 @@
       <?php the_terms( get_the_ID(), 'news-category' ); ?>
     </span><!-- カスタム投稿のカテゴリーを表示する -->
     <div class="p-taxonomy--style-tag">
-      <?php
-        $tag_terms = get_the_terms( get_the_ID(), 'news-tag' ); // タームを取得
-        if ( $tag_terms && ! is_wp_error( $tag_terms ) ) {
-          foreach ( $tag_terms as $tag ) {
-            echo '<span>' . $tag->name . '</span>'; // 各タグを独立した要素として表示
-          }
+    <?php
+      $tag_terms = get_the_terms( get_the_ID(), 'news-tag' ); // タームを取得
+      if ( $tag_terms && ! is_wp_error( $tag_terms ) ) {
+        foreach ( $tag_terms as $tag ) {
+          echo '<a href="' . get_term_link( $tag ) . '">' . $tag->name . '</a>'; // リンク付きのテキストとしてタームを表示
         }
-      ?>
+      }
+    ?>
     </div><!-- カスタム投稿のタグを表示する -->
     <p><?php echo esc_html(mb_substr(get_the_excerpt(),0,80)) . '...'; ?></p>
-    <a href="<?php the_permalink(); ?>" class="c-button--announce-item p-stretched--link">詳しく見る</a>
+    <a href="<?php the_permalink(); ?>" class="c-button--announce-item">詳しく見る</a>
   </div>
 </section>
