@@ -11,6 +11,9 @@
       font-size: 16px;
       color: #3C2A10;
     }
+    article {
+      position: relative;
+    }
   } 
 }
 @include m.mq(tab) {
@@ -19,11 +22,13 @@
     padding-left: 45px;
     padding-right: 45px;
     width: 100vw;
-    
   & > p {
       font-family: 'M+ 1m';
       font-size: 16px;
       color: #3C2A10;
+    }
+    article {
+      position: relative;
     }
   } 
 }
@@ -38,6 +43,9 @@
       font-family: 'M+ 1m';
       font-size: 16px;
       color: #3C2A10;
+    }
+    article {
+      position: relative;
     }
   } 
 }

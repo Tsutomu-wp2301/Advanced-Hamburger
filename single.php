@@ -57,12 +57,19 @@
             <div class="p-recommend__info__title">
               <?php 
                 if (is_plugin_active('custom-field-suite/cfs.php')) {
-                  $recommend_title = CFS()->get('recommended_information',$id);
-                  if(!empty($recommend_title)) {
-                    echo $recommend_title;
-                  } else { 
-                    echo '<a href="' . get_template_directory_uri() . '">ブログのトップページへ</a>';
-                  } 
+                  $link = CFS()->get('recommended_information', $id);
+                  
+                  if (!empty($link['text']) || !empty($link['url'])) {
+                    if (!empty($link['url'])) {
+                      echo '<a href="' . esc_url($link['url']) . '">' . esc_html($link['text']) . '</a>';
+                    } elseif (!empty($link['text'])) {
+                        echo esc_html($link['text']);
+                    }
+                  } else {
+                      $default_url = 'http://advanced.local/announcement/';
+                      $default_text = 'ブログトップページへ';
+                    echo '<a href="' . esc_url($default_url) . '">' . esc_html($default_text) . '</a>';
+                  }
                 }else{
                   echo 'プラグインCFSを有効化し、カスタムフィールドからおすすめ情報のタイトルを設定します';
                 }

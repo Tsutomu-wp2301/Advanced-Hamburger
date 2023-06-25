@@ -1,11 +1,24 @@
 <section class="p-archive__item--wrapper">
   <?php if(has_post_thumbnail()) : ?>
-  <?php the_post_thumbnail('archive_thumbnail',array('class' => 'c-post--thumbnail')); ?>
+  <?php the_post_thumbnail('archive_thumbnail',array('class' => 'c-post--thumbnail-search')); ?>
     <?php else : ?>
       <img src='<?php echo exc_url(get_template_directory_uri()); ?>/image/hamburger.png'>
     <?php endif; ?>
   <div class="p-archive__item">
-    <h3><?php the_title(); ?></h3>
+    <div class="p-flex--new">
+      <h3><?php the_title(); ?></h3>
+      <div class="p-new-mark">
+        <?php
+          $day  = 3000; // NEWマークを表示させる期間の日数を入れます
+          $today = date_i18n('U');
+          $post_day = get_the_time('U');
+          $term = date('U',($today - $post_day)) / 86400;
+          if( $day > $term ){
+              echo 'NEW';
+          }
+        ?>
+      </div>
+    </div>
     <h4>
       <?php include_once(ABSPATH . 'wp-admin/includes/plugin.php'); ?>
       <?php 

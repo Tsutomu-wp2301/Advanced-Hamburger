@@ -1,0 +1,8 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .p-flex--new {
+    display: flex;
+    justify-content: space-between;
+  }
+}

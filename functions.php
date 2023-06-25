@@ -93,7 +93,6 @@ function crunchify_dequeue_footer_styles()
 add_action('get_footer','crunchify_dequeue_footer_styles');
 
 
-
 // function sort_side_menu( $menu_order ) {
 //     return array(
 //       "index.php", // ダッシュボード
@@ -113,3 +112,11 @@ add_action('get_footer','crunchify_dequeue_footer_styles');
 //   }
 //   add_filter( 'custom_menu_order', '__return_true' );
 //   add_filter( 'menu_order', 'sort_side_menu' );
+
+
+function add_post_category_archive( $wp_query ) {
+    if ($wp_query->is_main_query() && $wp_query->is_category()) {
+    $wp_query->set( 'post_type', array('post','article'));
+    }
+    }
+add_action( 'pre_get_posts', 'add_post_category_archive' , 10 , 1);

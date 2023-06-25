@@ -12,6 +12,7 @@
     margin: 0px 0px 5px 0px;
     text-decoration: underline;
   }
+
 }
 @include m.mq(tab) {
   .c-button--announce-item {
