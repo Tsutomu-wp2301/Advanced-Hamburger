@@ -13,11 +13,16 @@
     }
     span {
       display: inline-block;
+      text-decoration: none;
       color:#3C2B1C;
       font-family: 'M+ 1m';
       font-weight: normal;
       font-size: 12px;
       padding: 0px 0px 5px 0px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
     p {
       color:#3C2B1C;
@@ -26,11 +31,21 @@
       font-size: 16px;
       padding: 13px 0px 5px 0px;
     }
+    .p-taxonomy--style {
+      display: inline-block;
+      color:#3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: normal;
+      font-size: 12px;
+      padding: 0px 0px 5px 0px;
+    }
+
   }
 }
 @include m.mq(tab) {
   .p-news__archive__item {
     background-color: #fff;
+    width: calc(100% - 208px);
     h3 {
       color:#3C2B1C;
       font-family: 'M+ 1m';
@@ -46,12 +61,28 @@
       font-size: 12px;
       padding: 0px 0px 2px 20px;
     }
+    span:nth-of-type(1) {
+      margin-left: 20px;
+    }
     p {
       color:#3C2B1C;
       font-family: 'M+ 1m';
       font-weight: normal;
       font-size: 16px;
       padding: 13px 0px 5px 20px;
+    }
+    span {
+      display: inline-block;
+      text-decoration: none;
+      color:#3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: normal;
+      font-size: 12px;
+      padding: 0px 0px 5px 0px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
   }
 }
@@ -60,6 +91,7 @@
   .p-news__archive__item {
     background-color: #fff;
     position: relative;
+    width: calc(100% - 337px);
     h3 {
       color:#3C2B1C;
       font-family: 'M+ 1m';
@@ -75,12 +107,28 @@
       font-size: 12px;
       padding: 0px 0px 2px 20px;
     }
+    span:nth-of-type(1) {
+      margin-left: 20px;
+    }
     p {
       color:#3C2B1C;
       font-family: 'M+ 1m';
       font-weight: normal;
       font-size: 16px;
       padding: 13px 0px 5px 20px;
+    }
+    span {
+      display: inline-block;
+      text-decoration: none;
+      color:#3C2B1C;
+      font-family: 'M+ 1m';
+      font-weight: normal;
+      font-size: 12px;
+      padding: 0px 0px 5px 0px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
   }
 }

@@ -1,0 +1,48 @@
+@use '../../foundation/breakpoint' as m;
+
+@include m.mq(sp) {
+  .p-new-mark {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff8A00;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    display: block;
+  }
+}
+@include m.mq(tab) {
+  .p-new-mark {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff8A00;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+@include m.mq(pc) {
+  .p-new-mark {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff8A00;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}

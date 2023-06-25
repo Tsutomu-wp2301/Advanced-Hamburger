@@ -18,7 +18,9 @@ $id = $announcement->ID;
         <p>
           <?php
             $count = $wp_query->found_posts; // 投稿の総件数を取得
-            echo '全ての記事（' . $count . '件）';
+            $current_term = get_queried_object(); // 現在表示されているタームを取得
+            $term_name = $current_term->name; // 現在表示されているタームの名前
+            echo $term_name . '（' . $count . '件）';
           ?>
         </P>
       </div>
