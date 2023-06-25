@@ -31,8 +31,20 @@
     align-items: center;
     background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
     border-radius: 10px;
+    position: relative;
     a {
       margin: auto;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: auto;
+        content: "";
+        background-color: rgba(0, 0, 0, 0);
+      }
     }
     .wp-block-button__link {
       background-color: rgba(0,0,0,0);
@@ -69,8 +81,20 @@
       align-items: center;
       background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
       border-radius: 10px;
+      position: relative;
       a {
         margin: auto;
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          pointer-events: auto;
+          content: "";
+          background-color: rgba(0, 0, 0, 0);
+        }
       }
       .wp-block-button__link {
         background-color: rgba(0,0,0,0);
@@ -108,8 +132,20 @@
     align-items: center;
     background-image:linear-gradient(to right, #F2EDE9, #DED8D3);
     border-radius: 10px;
+    position: relative;
     a {
       margin: auto;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: auto;
+        content: "";
+        background-color: rgba(0, 0, 0, 0);
+      }
     }
     .wp-block-button__link {
       background-color: rgba(0,0,0,0);
