@@ -12,7 +12,7 @@ $id = $announcement->ID;
           </nav>
         <?php endif; ?>
       <?php endif; ?>
-      <div class="p-announce__title__layout">
+      <div class="p-archive__title__layout">
         <div class="p-announcement__archive-image"></div>
         <h1>News: </h1>
         <p>
